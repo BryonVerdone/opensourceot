@@ -7,13 +7,19 @@ import Layout from './layout/Layout';
 import data from './data';
 import { useState } from 'react';
 console.log(data);
-
+const url = 'http://localhost:1337/api/activities?populate=*';
 function App() {
   // pass data to list component
   // problem with data
   const [activities, setActivities] = useState(data);
   console.log(activities);
+  const fetchData = async () => {
+    const res = await fetch(url);
+    const data = await res.json();
+    console.log(data);
+  };
 
+  fetchData();
   return (
     <BrowserRouter>
       <Routes>

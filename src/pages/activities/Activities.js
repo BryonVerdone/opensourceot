@@ -1,7 +1,11 @@
 import React from 'react';
 import './index.css';
 import SingleActivity from '../../components/single-activity/SingleActivity';
-const Activities = ({ activities }) => {
+import Loading from '../../components/loading/Loading';
+const Activities = ({ activities, loading }) => {
+  if (loading) {
+    return <Loading />;
+  }
   return (
     <>
       <h1>Activities</h1>

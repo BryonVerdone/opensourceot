@@ -1,11 +1,16 @@
 import React from 'react';
-import List from '../../components/list/List';
-
+import './index.css';
+import SingleActivity from '../../components/single-activity/SingleActivity';
 const Activities = ({ activities }) => {
   return (
-    <div>
-      <List activities={activities} />
-    </div>
+    <>
+      <h1>Activities</h1>
+      <section className='activities-list'>
+        {activities.map((activity) => {
+          return <SingleActivity key={activity.id} {...activity} />;
+        })}
+      </section>
+    </>
   );
 };
 

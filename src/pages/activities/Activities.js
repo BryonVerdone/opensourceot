@@ -8,7 +8,7 @@ const Activities = ({ activities, loading }) => {
   }
   return (
     <>
-      <h1>Activities</h1>
+      <h1 style={{ textAlign: 'center' }}>Activities</h1>
       <section className='activities-list'>
         {activities.map((activity) => {
           return <SingleActivity key={activity.id} {...activity} />;

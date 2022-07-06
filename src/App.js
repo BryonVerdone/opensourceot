@@ -4,10 +4,11 @@ import Home from './pages/home/Home';
 import About from './pages/about-us/About';
 import Activities from './pages/activities/Activities';
 import Layout from './layout/Layout';
-// import data from './data';
+import SharedActivityLayout from './pages/shared-activity-layout/SharedActivityLayout';
 import { useEffect, useState } from 'react';
+import SingleActivity from './components/single-activity/SingleActivity';
 
-const url = 'http://localhost:1337/api/activities?populate=*';
+const url = 'http://localhost:1337/api/activities?populate=image';
 function App() {
   const [activities, setActivities] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -17,7 +18,7 @@ function App() {
       const res = await fetch(url);
       const activities = await res.json();
       setActivities(activities.data);
-      setLoading();
+      setLoading(false);
     } catch (error) {
       console.log(error);
       setLoading(false);
@@ -32,10 +33,19 @@ function App() {
         <Route path='/' element={<Layout />}>
           <Route index element={<Home />} />
           <Route path='about' element={<About />} />
-          <Route
-            path='activities'
-            element={<Activities loading={loading} activities={activities} />}
-          />
+          <Route path='activities' element={<SharedActivityLayout />}>
+            <Route
+              index
+              element={<Activities loading={loading} activities={activities} />}
+            />
+            {/* this is what I had passed in to SingleActivity activities, id, attributes */}
+            <Route
+              path=':activityId'
+              element={
+                <SingleActivity loading={loading} activities={activities} />
+              }
+            />
+          </Route>
         </Route>
       </Routes>
     </BrowserRouter>

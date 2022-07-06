@@ -1,31 +1,50 @@
-import React from 'react';
-import Card from 'react-bootstrap/Card';
-import Button from 'react-bootstrap/Button';
+import React, { useState, useEffect } from 'react';
+
+import { Link, useParams } from 'react-router-dom';
 import './index.css';
-const SingleActivity = ({ id, attributes }) => {
+const SingleActivity = () => {
+  const { activityId } = useParams();
+  const [activity, setActivity] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const fetchActivity = async () => {
+    const url = `http://localhost:1337/api/activities/${activityId}?populate=*`;
+    setLoading(true);
+    try {
+      const res = await fetch(url);
+      const activity = await res.json();
+      setActivity(activity.data);
+      setLoading(false);
+    } catch (error) {
+      console.log(error);
+      setLoading(false);
+    }
+  };
+  useEffect(() => {
+    fetchActivity();
+  }, []);
+
+  if (loading) {
+    return (
+      <>
+        <h1>loading</h1>
+      </>
+    );
+  }
+
+  console.log(activity);
+  const { title, image } = activity.attributes;
+  const { url } = image.data.attributes;
+  console.log(image);
+  console.log(url);
+
   return (
-    <>
-      <article>
-        <Card className='activity-card' style={{}}>
-          <Card.Img
-            className='activity-img'
-            variant='top'
-            src={`http://localhost:1337` + attributes.image.data.attributes.url}
-          />
-          <Card.Body>
-            <Card.Title>
-              {' '}
-              <h3>{attributes.title}</h3>
-            </Card.Title>
-            <Card.Text className='card-text'>
-              {' '}
-              <p>{attributes.desc}</p>
-            </Card.Text>
-            <Button variant='primary'>More Info</Button>
-          </Card.Body>
-        </Card>
-      </article>
-    </>
+    <article key={activity.id}>
+      <h1>{title}</h1>
+      <img src={`http://localhost:1337` + url} alt='' />
+      <Link to='/activities'>
+        <button>Back to Activities</button>
+      </Link>
+    </article>
   );
 };
 

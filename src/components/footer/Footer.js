@@ -1,7 +1,14 @@
 import React from 'react';
-
+import './index.css';
 const Footer = () => {
-  return <footer>&copy; Open Source OT</footer>;
+  return (
+    <footer className='footer'>
+      <span>&copy; Open Source OT </span>
+      <span>
+        Created By: <a href=''>Bryon Verdone</a>
+      </span>
+    </footer>
+  );
 };
 
 export default Footer;

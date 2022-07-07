@@ -8,14 +8,14 @@ const Activities = ({ activities, loading }) => {
     return <Loading />;
   }
   return (
-    <>
+    <section className='activities-list'>
       {/* {console.log(activities.attributes)} */}
 
       {activities.map((activity) => {
         // console.log(activity.attributes);
         return (
-          <>
-            <Card style={{ width: '18rem' }}>
+          <article key={activity.id}>
+            <Card className='activity-card' style={{ width: '18rem' }}>
               <Card.Img
                 variant='top'
                 src={
@@ -32,28 +32,14 @@ const Activities = ({ activities, loading }) => {
                   <span>{activity.attributes.desc}</span>
                 </Card.Text>
                 <Link activities={activities} to={`/activities/${activity.id}`}>
-                  <button>more info</button>{' '}
+                  <button className='btn'>more info</button>{' '}
                 </Link>
               </Card.Body>
             </Card>
-          </>
-
-          // <article key={activity.id}>
-          //   <h3>{activity.attributes.title}</h3>
-          //   <img
-          //     src={
-          //       `http://localhost:1337` +
-          //       activity.attributes.image.data.attributes.url
-          //     }
-          //   ></img>
-          //   <span>{activity.attributes.desc}</span>
-          //   <Link activities={activities} to={`/activities/${activity.id}`}>
-          //     <button>more info</button>
-          //   </Link>
-          // </article>
+          </article>
         );
       })}
-    </>
+    </section>
   );
 };
 

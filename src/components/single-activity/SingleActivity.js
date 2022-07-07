@@ -32,19 +32,28 @@ const SingleActivity = () => {
   }
 
   console.log(activity);
-  const { title, image } = activity.attributes;
+  const { title, image, instructions } = activity.attributes;
   const { url } = image.data.attributes;
   console.log(image);
   console.log(url);
-
+  // add full description to page
   return (
-    <article key={activity.id}>
-      <h1>{title}</h1>
-      <img src={`http://localhost:1337` + url} alt='' />
-      <Link to='/activities'>
-        <button>Back to Activities</button>
-      </Link>
-    </article>
+    <section className='single-activity-section'>
+      <article key={activity.id}>
+        <h1> {title}</h1>
+        <img
+          className='single-activity-img'
+          src={`http://localhost:1337` + url}
+          alt=''
+        />
+        <p>{instructions}</p>
+        <div>
+          <Link to='/activities'>
+            <button>Back to Activities</button>
+          </Link>
+        </div>
+      </article>
+    </section>
   );
 };
 

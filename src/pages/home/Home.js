@@ -41,12 +41,23 @@ const Home = () => {
             </p>
           </div>
           <div className='goal-img-container'>
-            <img
-              style={{ width: '400px' }}
-              src={goalImage}
-              alt='kids writing'
-            />
+            <img style={{ width: '100%' }} src={goalImage} alt='kids writing' />
           </div>
+        </div>
+      </section>
+      <section className='provide-section'>
+        <h2>The Content We Provide</h2>
+        {/* add icons to cards */}
+        <div className='card-container'>
+          <article className='card'>
+            <h4>Activities created by OT pros</h4>
+          </article>
+          <article className='card'>
+            <h4>Picture examples with instructions</h4>
+          </article>
+          <article className='card'>
+            <h4>Limited to no equipment required</h4>
+          </article>
         </div>
       </section>
     </>

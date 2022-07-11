@@ -114,6 +114,7 @@ provide section
   gap: 30px;
   max-width: 1170px;
   margin: 0 auto;
+  padding: 0 20px;
 }
 @media screen and (max-width: 768px) {
   .card-container {

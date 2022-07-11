@@ -40,7 +40,7 @@ const SingleActivity = () => {
   return (
     <section className='single-activity-section'>
       <article key={activity.id}>
-        <h1> {title}</h1>
+        <h1>{title}</h1>
         <img
           className='single-activity-img'
           src={`http://localhost:1337` + url}

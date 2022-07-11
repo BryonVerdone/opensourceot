@@ -5,12 +5,13 @@
   gap: 2rem;
   flex-wrap: wrap;
   max-width: 1170px;
-  margin: 0 auto;
+  margin: 1rem auto;
 }
-.activity-card {
+/*  {
   width: 100px;
-}
+} */
 .btn {
+  cursor: pointer;
   background-color: #7a36bf;
   border-radius: 8px;
   padding: 10px;
@@ -18,4 +19,20 @@
   color: white;
   text-transform: capitalize;
   width: 100%;
+}
+.activity-card {
+  text-transform: capitalize;
+  background-color: #f3f7fd;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /* gap: 5px; */
+  transition: 300ms;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.08), 0 0 6px rgba(0, 0, 0, 0.05);
+}
+.activity-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06);
 }

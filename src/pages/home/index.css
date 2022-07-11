@@ -1,0 +1,134 @@
+.hero-section {
+  width: 100%;
+  background-color: #f3f7fd;
+}
+
+.hero-container {
+  padding: 5rem;
+  max-width: 1170px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+  background-color: #f3f7fd;
+}
+.hero-img-container img {
+  width: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+@media screen and (max-width: 768px) {
+  .hero-img-container img {
+    display: none;
+  }
+}
+.hero-image {
+  border-radius: 50%;
+  width: 100%;
+}
+.hero-text {
+  /* padding: 0 20px; */
+}
+.hero-text h1 {
+  font-size: 64px;
+}
+@media screen and (max-width: 768px) {
+  .hero-text h1 {
+    font-size: 48px;
+  }
+}
+.hero-text p {
+  font-size: 18px;
+}
+.hero-btn-container {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+}
+.hero-btn-container button {
+  background-color: purple;
+}
+.btn {
+  background-color: #7a36bf;
+  border-radius: 8px;
+  padding: 10px;
+  border: none;
+  color: white;
+  text-transform: capitalize;
+  /* width: 100%; */
+  max-width: 100px;
+}
+/* 
+==========
+goal section
+==========
+*/
+.goal-section {
+  background-color: #f5f5f5;
+  width: 100%;
+}
+.goal-container {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 5rem;
+  gap: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.goal-text h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+.goal-text p {
+  max-width: 700px;
+  line-height: 30px;
+}
+@media screen and (max-width: 768px) {
+  .goal-img-container {
+    display: none;
+  }
+}
+/* 
+==========
+provide section
+==========
+*/
+.provide-section {
+  width: 100%;
+  background-color: #f5f5f5;
+}
+.provide-section h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.card-container {
+  /* display: grid;
+  grid-template-columns: repeat(2, 1fr); */
+  /* align-items: stretch; */
+  display: flex;
+  /* flex-wrap: wrap; */
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 768px) {
+  .card-container {
+    padding: 0 20px;
+    flex-direction: column;
+  }
+}
+.card {
+  flex: 33.3333%;
+  width: 100%;
+  border-radius: 10px;
+  padding: 25px;
+  background-color: #ffff;
+}
+.card h4 {
+  text-align: center;
+  font-size: 18px;
+}

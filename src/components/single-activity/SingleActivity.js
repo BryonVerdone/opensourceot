@@ -36,7 +36,7 @@ const SingleActivity = () => {
   const { url } = image.data.attributes;
   console.log(image);
   console.log(url);
-  // add full description to page
+
   return (
     <section className='single-activity-section'>
       <article key={activity.id}>

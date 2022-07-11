@@ -1,3 +1,12 @@
-h1 {
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Amatic SC', cursive;
+  font-weight: 700;
   text-transform: capitalize;
 }
+p {
+  font-family: 'Josefin Sans', sans-serif;
+}
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200&display=swap');

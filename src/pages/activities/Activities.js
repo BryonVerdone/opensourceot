@@ -1,6 +1,8 @@
 import React from 'react';
 import './index.css';
 import { Link } from 'react-router-dom';
+import Container from 'react-bootstrap/Container';
+
 import Loading from '../../components/loading/Loading';
 import Card from 'react-bootstrap/Card';
 const Activities = ({ activities, loading }) => {

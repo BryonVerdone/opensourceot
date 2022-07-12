@@ -1,6 +1,6 @@
 .footer {
   background-color: #000000;
-  color: white;
+  color: #ffde59;
   text-align: center;
   font-size: 2.25rem;
   font-family: 'Amatic SC', cursive;
@@ -11,6 +11,6 @@
   right: 0; */
 }
 
-a {
-  color: white;
+footer a {
+  color: #ffde59;
 }

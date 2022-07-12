@@ -1,0 +1,30 @@
+.about-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.headshot-container {
+  position: relative;
+}
+
+.headshot {
+  border-radius: 10%;
+  max-width: 100%;
+}
+.about-content {
+  padding: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.about-text {
+  margin-top: 30px;
+  line-height: 20px;
+}
+.about-text :first-child {
+  margin-bottom: 10px;
+}

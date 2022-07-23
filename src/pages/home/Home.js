@@ -4,6 +4,7 @@ import Container from 'react-bootstrap/Container';
 import Card from 'react-bootstrap/Card';
 import heroImage from '../../assets/hero-img.png';
 import goalImage from '../../assets/goal-img.png';
+
 const Home = () => {
   return (
     <>

@@ -24,7 +24,7 @@ const Activities = ({ activities, loading }) => {
                   }}
                   variant='top'
                   src={
-                    `http://localhost:1337` +
+                    // `http://localhost:1337` +
                     activity.attributes.image.data.attributes.url
                   }
                 />

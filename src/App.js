@@ -8,7 +8,7 @@ import SharedActivityLayout from './pages/shared-activity-layout/SharedActivityL
 import { useEffect, useState } from 'react';
 import SingleActivity from './components/single-activity/SingleActivity';
 
-const url = 'http://localhost:1337/api/activities?populate=image';
+const url = 'https://activities-data.herokuapp.com/api/activities?populate=*';
 function App() {
   const [activities, setActivities] = useState([]);
   const [loading, setLoading] = useState(true);
